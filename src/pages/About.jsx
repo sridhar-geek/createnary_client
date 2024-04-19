@@ -15,7 +15,7 @@ const About = () => {
             You focus on helping your friends and family, we take care of
             everything else.
           </p>
-          <button className="bg-primary text-white rounded-full py-4 px-7">Get Started</button>
+          <button className="btn">Get Started</button>
         </div>
         <div className="flex-auto">
 

@@ -8,7 +8,7 @@ import {useNavigate} from 'react-router-dom'
 const Header = () => {
   const navigate = useNavigate()
   return (
-    <header className="bg-glass rounded-3xl md:rounded-full mt-5 md:px-3 mx-8 py-3 px-6 bg-opacity-10">
+    <header className="bg-glass rounded-3xl md:rounded-full mt-5 px-1 md:px-3 mx-8 py-3 bg-opacity-10">
       <div className="flex  md:flex-row justify-between md:justify-evenly ">
         <div className=" flex flex-col md:flex-row gap-3 items-start">
           <button className="text-xl font-bold"onClick={()=> navigate('/')}>Createnary</button>
@@ -22,15 +22,15 @@ const Header = () => {
             <BsSearch className="icon w-5 h-4 absolute top-1/3 left-3 " />
           </div>
         </div>
-        <div className="header_element">
+        <div className="header_element effect">
           <CgShoppingCart />
           <button>Cart</button>
         </div>
-        <div className="header_element">
+        <div className="header_element effect">
           <BsInfoCircle />
           <button onClick={()=> navigate('/about')}>About</button>
         </div>
-        <div className="header_element">
+        <div className="header_element effect">
           <TfiHeadphoneAlt />
           <button>Contact</button>
         </div>
