@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-primary pt-10 pb-5 text-body ">
       {/* box 1 */}
       <div className="flex flex-col md:items-center sm:justify-between  mx-5 md:flex-row gap-5">
-        <h3 className=""> Createanary</h3>
+        <h3 className="font-monoton text-xl"> Createanary</h3>
         {/* box 2 */}
         <div>
           <h4 className="footer_items font-extrabold">Navigation</h4>
@@ -33,7 +33,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="border border-white border-x-2"></div>
+      <div className="border border-gray-500 border-x-2"></div>
+    <div className="text-center mt-3"> © Createnary 2024</div>
     </footer>
   );
 };

@@ -22,10 +22,10 @@ export default {
       },
       fontFamily: {
         urbanist: "Urbanist",
-        monoton: "Monoton",
+        monoton: ["Monoton"],
       },
     },
   },
-  plugins: [ ],
+  plugins: [],
 };
 
