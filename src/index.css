@@ -1,0 +1,24 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Header Styles */
+    .header_element {
+        @apply flex items-center gap-2 hidden md:flex
+    }
+    /* About page Styles */
+    .headings{
+        @apply text-xl font-semibold font-sans md:text-2xl 
+    }
+    .para{
+        @apply font-normal text-gray-500 text-base
+    }
+    /* Footer Styles */
+    .footer_items {
+        @apply mb-3 font-medium
+    }
+
+
+}
