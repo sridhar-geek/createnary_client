@@ -1,4 +1,5 @@
-import { MdLocationOn, MdOutlinePhone } from "react-icons/md";
+import { MdLocationOn } from "react-icons/md";
+import {  MdOutlinePhone} from "react-icons/md";
 
 const Footer = () => {
   return (
