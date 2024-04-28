@@ -6,7 +6,12 @@
 @layer base {
     /* Header Styles */
     .header_element {
-        @apply flex items-center gap-2 hidden md:flex
+        @apply  items-center gap-2 hidden md:flex
+    }
+    .effect {
+    }
+    .extraBtn{
+        @apply py-1 text-center cursor-pointer
     }
     /* Home Page */
     .arrow {
@@ -14,7 +19,7 @@
     }
     /* About page Styles */
     .headings{
-        @apply text-xl font-semibold font-sans md:text-2xl 
+        @apply text-xl font-semibold font-sans md:text-3xl 
     }
     .para{
         @apply font-normal text-gray-500 text-base
@@ -22,6 +27,7 @@
     .btn{
         @apply bg-primary text-white rounded-full py-4 px-7
     }
+    /* FAQ section */
     /* Footer Styles */
     .footer_items {
         @apply mb-3 font-medium

@@ -10,7 +10,7 @@ import Header from "./Components/Header";
 function App() {
   return (
     <>
-    {/* <Header /> */}
+    <Header />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />

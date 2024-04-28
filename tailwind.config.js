@@ -18,11 +18,13 @@ export default {
         steelblue: "#7075b5",
         gainsboro: "#dee0e0",
         white: "#fff",
+        glassy: "#dddddd",
         glass: "rgba(214, 214, 214, 0.4)",
       },
       fontFamily: {
         urbanist: "Urbanist",
         monoton: ["Monoton"],
+        Poppins : 'Poppins'
       },
     },
   },

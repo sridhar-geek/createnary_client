@@ -1,19 +1,13 @@
-import HeroComponent from "../Components/HeroComponent";
-import Header from "../Components/Header";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+
+// Imports from another files
+import HeroComponent from "../Components/HeroComponent";
+import FAQ from "../Components/FAQ";
 
 const Home = () => {
   return (
     <main>
-      <div className="overflow  relative">
-        <img src="/background.png" alt="" />
-        <div className="absolute top-0 left-0 right-0 ">
-          <Header />
-        </div>
-        <div className=" absolute top-40 left-0 right-0">
-          <HeroComponent />
-        </div>
-      </div>
+      <HeroComponent />
       <div className="text-center bg-primary">
         <h3 className="headings mb-5 text-white">Your audience wants links</h3>
 
@@ -31,6 +25,8 @@ const Home = () => {
         </div>
         <button className="btn bg-white text-primary">Try for Free</button>
       </div>
+      {/* Frequently asked questions section */}
+     <FAQ />
     </main>
   );
 };
