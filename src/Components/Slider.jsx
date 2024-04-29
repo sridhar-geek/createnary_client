@@ -27,7 +27,6 @@ const Slider = () => {
     <div className="text-center bg-primary p-3">
       <div>
         <h3 className="headings mb-5 text-white">Your audience wants links</h3>
-
         <p className="para text-white font-light mb-5">
           Made it easy for them by linking products to every post and video
         </p>

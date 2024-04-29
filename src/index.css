@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
+  
   /* Header Styles */
   .header_element {
     @apply items-center gap-2 hidden md:flex;
@@ -15,6 +18,10 @@
   /* Home Page */
   .arrow {
     @apply text-5xl text-white;
+  }
+  /*Earnings */
+  .questions{
+    @apply font-Poppins text-sm font-bold
   }
   /* About page Styles */
   .headings {

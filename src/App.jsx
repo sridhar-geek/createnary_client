@@ -9,14 +9,14 @@ import Header from "./Components/Header";
 
 function App() {
   return (
-    <>
-    <Header />
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about" element={<About />} />
-    </Routes>
+    <div className="bg-[#f8f9fb]">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
       <Footer />
-    </>
+    </div>
   );
 }
 export default App;

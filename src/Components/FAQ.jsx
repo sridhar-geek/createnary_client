@@ -44,7 +44,7 @@ const FAQ = () => {
     queryKey: ["questions"],
     queryFn: getQuestions,
   });
-
+console.log(data)
   if (isLoading) return <h1>Loading....</h1>;
   // if error occoured it shows error message
   if (isError) return <p>{error.message}</p>;

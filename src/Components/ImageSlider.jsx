@@ -1,72 +1,64 @@
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import image5 from "../../public/image5.png";
 import image6 from "../../public/image6.png";
 import image8 from "../../public/image8.png";
-import { useState } from "react";
-const images = [image5, image6, image8];
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-const ImageSlider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const handlePrev = () => {
-    const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
+const responsive = {
+  desktop: {
+    breakpoint: { max: 3000, min: 1024 },
+    items: 1,
+  },
+  tablet: {
+    breakpoint: { max: 1024, min: 464 },
+    items: 1,
+  },
+  mobile: {
+    breakpoint: { max: 464, min: 0 },
+    items: 1,
+  },
+};
 
-  const handleNext = () => {
-    const newIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
+const Slider = () => {
+    const images = [image5, image6, image8];
   return (
-    <div className="relative">
-      <div className="overflow-x-hidden w-full h-full">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={
-              index === currentIndex
-                ? "block absolute inset-0 object-cover w-full h-full"
-                : "hidden absolute inset-0 object-cover w-full h-full"
-            }
-          >
-            <img
-              src={image}
-              alt='logo'
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
+   <Carousel
+     swipeable={true}
+     draggable={true}
+     showDots={false}
+     autoPlay={true}
+     responsive={responsive}
+     infinite={false}
+     autoPlaySpeed={1000}
+     keyBoardControl={true}
+     transitionDuration={500}
+     containerClass="carousel-container"
+     dotListClass="custom-dot-list-style"
+     itemClass="carousel-item-padding-40-px"
+   >
+     {images.map((image, index) => (
+      <div key={index} className="w-2/3  mx-auto">
+        <img  src={image} alt="group" className="w-full" />
       </div>
-      <div className="flex justify-between absolute inset-y-0 w-full px-4">
-        <button
-          type="button"
-          onClick={handlePrev}
-          className="text-white w-auto p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-opacity-75 rounded-full bg-gray-900"
-        >
-          <svg
-            className="w-4 h-4"
-            aria-hidden="true"
-            focusable="false"
-            viewBox="0 0 10 10"
-          >
-            <path d="M7.777 5l-2.79-2.79-1.414 1.414 2.79 2.79-1.414 1.414 1.414-1.414z" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          onClick={handleNext}
-          className="text-white w-auto p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 hover:bg-opacity-75 rounded-full bg-gray-900"
-        >
-          <svg
-            className="w-4 h-4"
-            aria-hidden="true"
-            focusable="false"
-            viewBox="0 0 10 10"
-          >
-            <path d="M2.223 5l2.79-2.79 1.414 1.414-2.79 2.79 1.414 1.414-1.414-1.414z" />
-          </svg>
-        </button>
+     ))}
+   </Carousel>
+  )
+}
+const ImageSlider = () => {
+      const handleClick = () => {};
+  return (
+    <div className="text-center bg-primary p-3">
+      <div>
+        <h3 className="headings mb-5 text-white">Your audience wants links</h3>
+        <p className="para text-white font-light mb-5">
+          Made it easy for them by linking products to every post and video
+        </p>
+        <Slider />
+        <button className="btn bg-white text-primary">Try for Free</button>
       </div>
+
     </div>
   );
 };
