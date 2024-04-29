@@ -5,6 +5,32 @@ import image6 from "../../public/image6.png";
 import image8 from "../../public/image8.png";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
+const RightButton = ({ onClick, ...rest }) => {
+  return (
+    <button
+      onClick={onClick}
+      {...rest}
+      style={{
+        display: "inline-block",
+        background: "none",
+        border: "none",
+        padding: "10px",
+        color: "#000",
+      }}
+    >
+      {" "}
+      <MdKeyboardArrowRight />
+    </button>
+  );
+};
+
+const LeftButton = ({ onClick, ...rest }) => {
+  return (
+    <button onClick={onClick} {...rest}>
+      <MdKeyboardArrowLeft />
+    </button>
+  );
+};
 
 const responsive = {
   desktop: {
@@ -22,32 +48,32 @@ const responsive = {
 };
 
 const Slider = () => {
-    const images = [image5, image6, image8];
+  const images = [image5, image6, image8];
   return (
-   <Carousel
-     swipeable={true}
-     draggable={true}
-     showDots={false}
-     autoPlay={true}
-     responsive={responsive}
-     infinite={false}
-     autoPlaySpeed={1000}
-     keyBoardControl={true}
-     transitionDuration={500}
-     containerClass="carousel-container"
-     dotListClass="custom-dot-list-style"
-     itemClass="carousel-item-padding-40-px"
-   >
-     {images.map((image, index) => (
-      <div key={index} className="w-2/3  mx-auto">
-        <img  src={image} alt="group" className="w-full" />
-      </div>
-     ))}
-   </Carousel>
-  )
-}
+    <Carousel
+      swipeable
+      draggable
+      // customLeftArrow={<LeftButton />}
+      // customRightArrow={<RightButton />}
+      showDots={false}
+      responsive={responsive}
+      ssr
+      keyBoardControl
+      transitionDuration={500}
+      containerClass="carousel-container"
+      dotListClass="custom-dot-list-style"
+      itemClass="carousel-item-padding-40-px"
+    >
+      {images.map((image, index) => (
+        <div key={index} className="w-2/3  mx-auto">
+          <img src={image} alt="group" className="w-full" />
+        </div>
+      ))}
+    </Carousel>
+  );
+};
 const ImageSlider = () => {
-      const handleClick = () => {};
+  const handleClick = () => {};
   return (
     <div className="text-center bg-primary p-3">
       <div>
@@ -58,7 +84,6 @@ const ImageSlider = () => {
         <Slider />
         <button className="btn bg-white text-primary">Try for Free</button>
       </div>
-
     </div>
   );
 };
