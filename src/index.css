@@ -1,37 +1,34 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    /* Header Styles */
-    .header_element {
-        @apply  items-center gap-2 hidden md:flex
-    }
-    .effect {
-    }
-    .extraBtn{
-        @apply py-1 text-center cursor-pointer
-    }
-    /* Home Page */
-    .arrow {
-        @apply text-5xl text-white
-    }
-    /* About page Styles */
-    .headings{
-        @apply text-xl font-semibold font-sans md:text-3xl 
-    }
-    .para{
-        @apply font-normal text-gray-500 text-base
-    }
-    .btn{
-        @apply bg-primary text-white rounded-full py-4 px-7
-    }
-    /* FAQ section */
-    /* Footer Styles */
-    .footer_items {
-        @apply mb-3 font-medium
-    }
-
-
+  /* Header Styles */
+  .header_element {
+    @apply items-center gap-2 hidden md:flex;
+  }
+  .effect {
+  }
+  .extraBtn {
+    @apply py-1 text-center cursor-pointer;
+  }
+  /* Home Page */
+  .arrow {
+    @apply text-5xl text-white;
+  }
+  /* About page Styles */
+  .headings {
+    @apply text-xl font-semibold font-sans md:text-3xl;
+  }
+  .para {
+    @apply font-normal text-gray-500 text-base;
+  }
+  .btn {
+    @apply bg-primary text-white rounded-full py-4 px-7;
+  }
+  /* FAQ section */
+  /* Footer Styles */
+  .footer_items {
+    @apply mb-3 font-medium;
+  }
 }

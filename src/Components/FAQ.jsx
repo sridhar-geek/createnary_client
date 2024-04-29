@@ -41,7 +41,7 @@ const FAQ = () => {
   };
   // react query function to store data in cache
   const { data, error, isError, isLoading } = useQuery({
-    queryKey: ["text-images"],
+    queryKey: ["questions"],
     queryFn: getQuestions,
   });
 
